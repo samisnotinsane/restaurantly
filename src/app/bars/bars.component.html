@@ -4,7 +4,7 @@
     <li *ngFor="let bar of bars">
         <h4>{{  bar.name | uppercase }}</h4>
         <div>
-            <p>rating: {{ bar.rating }}</p>
+            <p>rating: {{ bar.rating }} stars</p>
             <p>category: {{ bar.category }}</p>
             <p>address: {{ bar.address }}</p>
             <p>url: <a [href]="bar.url">{{bar.url}}</a></p>

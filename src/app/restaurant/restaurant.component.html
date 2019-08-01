@@ -1,3 +1,14 @@
 <h3>Restaurants</h3>
-<i>Section not yet implemented.</i><br>
-<i>Please choose another category above. E.g. Coffee.</i>
+
+<ul>
+    <li *ngFor="let restaurant of restaurants">
+        <h4>{{ restaurant.name | uppercase }}</h4>
+        <div>
+            <p>rating: {{ restaurant.rating }} stars</p>
+            <p>category: {{ restaurant.category }}</p>
+            <p>address: {{ restaurant.address }}</p>
+            <p>url: <a [href]="restaurant.url">{{ restaurant.url }}</a></p>
+            <p>id: {{ restaurant.id }}</p>
+        </div>
+    </li>
+</ul>
