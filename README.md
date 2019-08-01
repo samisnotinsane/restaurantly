@@ -4,6 +4,7 @@ Browse local restaurants, cafes, pubs & bars.
 Currently in prototype phase, therefore data is mocked.
 
 Note: 'Trending' page is not yet implemented.
+
 -----
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
