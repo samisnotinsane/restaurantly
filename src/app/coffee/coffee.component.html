@@ -1,0 +1,14 @@
+<h3>Coffee</h3>
+
+<ul>
+    <li *ngFor="let coffee of coffees">
+        <h4>{{ coffee.name | uppercase }}</h4>
+        <div>
+            <p>rating: {{ coffee.rating }}</p>
+            <p>category: {{ coffee.category }}</p>
+            <p>address: {{ coffee.address }}</p>
+            <p>url: <a [href]="coffee.url">{{coffee.url}}</a></p>
+            <p>id: {{ coffee.id }}</p>
+        </div>
+    </li>
+</ul>
