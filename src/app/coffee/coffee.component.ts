@@ -9,22 +9,18 @@ import { CoffeeService } from '../coffee.service';
 })
 export class CoffeeComponent implements OnInit {
 
-  coffees: Restaurant[];
-  selectedCoffee: Restaurant;
+  counter: number = 0;
+  coffeeShops: Restaurant[];
+  selectedCoffeeShop: Restaurant;
 
   constructor(private coffeeService: CoffeeService) { }
 
-  getCoffees(): void {
-    this.coffeeService.getCoffees()
-      .subscribe(coffees => this.coffees = coffees);
-  }
-
   onSelect(coffee: Restaurant): void {
-    this.selectedCoffee = coffee;
+    this.selectedCoffeeShop = coffee;
   }
 
   ngOnInit() {
-    this.getCoffees();
+    this.coffeeShops = this.coffeeService.getRestaurants();
   }
 
 }
