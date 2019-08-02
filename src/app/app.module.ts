@@ -9,6 +9,7 @@ import { TrendingComponent } from './trending/trending.component';
 import { CoffeeComponent } from './coffee/coffee.component';
 import { PubsComponent } from './pubs/pubs.component';
 import { BarsComponent } from './bars/bars.component';
+import { CoffeeDetailComponent } from './coffee-detail/coffee-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BarsComponent } from './bars/bars.component';
     TrendingComponent,
     CoffeeComponent,
     PubsComponent,
-    BarsComponent
+    BarsComponent,
+    CoffeeDetailComponent
   ],
   imports: [
     BrowserModule,
