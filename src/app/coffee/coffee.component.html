@@ -1,14 +1,11 @@
-<h3>Coffee</h3>
+<h3>Coffee Near Me</h3>
 
-<ul>
-    <li *ngFor="let coffee of coffees">
-        <h4>{{ coffee.name | uppercase }}</h4>
-        <div>
-            <p>rating: {{ coffee.rating }} stars</p>
-            <p>category: {{ coffee.category }}</p>
-            <p>address: {{ coffee.address }}</p>
-            <p>url: <a [href]="coffee.url">{{coffee.url}}</a></p>
-            <p>id: {{ coffee.id }}</p>
-        </div>
+<ul class="coffee">
+    <li *ngFor="let coffee of coffees"
+        [class.selected]="coffee === selectedCoffee"
+        (click)="onSelect(coffee)">
+        <span class="badge">{{ coffee.id }}</span>{{ coffee.name }}
     </li>
 </ul>
+<hr>
+<app-coffee-detail [coffee]="selectedCoffee"></app-coffee-detail>

@@ -19,6 +19,10 @@ export class CoffeeComponent implements OnInit {
       .subscribe(coffees => this.coffees = coffees);
   }
 
+  onSelect(coffee: Restaurant): void {
+    this.selectedCoffee = coffee;
+  }
+
   ngOnInit() {
     this.getCoffees();
   }
