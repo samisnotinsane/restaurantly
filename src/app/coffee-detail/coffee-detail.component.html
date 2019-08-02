@@ -1,1 +1,7 @@
-<p>coffee-detail works!</p>
+<div *ngIf="coffee">
+    <h2>{{ coffee.name | uppercase }} &gt; Details</h2>
+    <p>rating: {{ coffee.rating }} stars</p>
+    <p>category: {{ coffee.category }}</p>
+    <p>address: {{ coffee.address }}</p>
+    <p>url: <a [href]="coffee.url">{{coffee.url}}</a></p>
+</div>
