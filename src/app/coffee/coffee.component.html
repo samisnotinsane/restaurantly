@@ -1,11 +1,11 @@
 <h3>Coffee Near Me</h3>
 
 <ul class="coffee">
-    <li *ngFor="let coffee of coffees"
-        [class.selected]="coffee === selectedCoffee"
-        (click)="onSelect(coffee)">
-        <span class="badge">{{ coffee.id }}</span>{{ coffee.name }}
+    <li *ngFor="let coffeeShop of coffeeShops; let i = index;"
+        [class.selected]="coffeeShop === selectedCoffeeShop"
+        (click)="onSelect(coffeeShop)">
+        <span class="badge">{{ i }}</span>{{ coffeeShop.name }}
     </li>
 </ul>
 <hr>
-<app-coffee-detail [coffee]="selectedCoffee"></app-coffee-detail>
+<app-coffee-detail [coffee]="selectedCoffeeShop"></app-coffee-detail>

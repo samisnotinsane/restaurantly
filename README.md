@@ -1,7 +1,10 @@
 # Restaurantly
 Browse local restaurants, cafes, pubs & bars. 
 
-Note: Currently in prototype phase, therefore data is mocked. 'Trending' page is not yet implemented.
+Notes:
+ - App uses FourSquare API, therefore results will not be shown without a valid 'client id' and 'client secret' token
+ - 'Trending' and 'Explore' pages are not yet implemented
+ - Location is hardcoded to London, GB
 
 ## Screenshots
 
