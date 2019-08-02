@@ -4,8 +4,8 @@ import { Observable } from 'rxjs';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
 const params = new HttpParams()
-    .set('client_id', 'ONTL5ZVUZJOSA0MGHGZD2NWIKXQFZNAJYGKGIK4VQ44GQAE0')
-    .set('client_secret', 'LLNGLOEACXGQJBENQFD0YUBVILKLFVZWXMBCXLVHUTBQDJIC')
+    .set('client_id', '')
+    .set('client_secret', '')
     .set('v', '20180323')
     .set('ll', '51.5132347,-0.0781538')
     .set('query', 'coffee')
