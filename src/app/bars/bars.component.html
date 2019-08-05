@@ -1,14 +1,11 @@
-<h3>Bars</h3>
+<h3>Bar Near Me</h3>
 
-<ul>
-    <li *ngFor="let bar of bars">
-        <h4>{{  bar.name | uppercase }}</h4>
-        <div>
-            <p>rating: {{ bar.rating }} stars</p>
-            <p>category: {{ bar.category }}</p>
-            <p>address: {{ bar.address }}</p>
-            <p>url: <a [href]="bar.url">{{bar.url}}</a></p>
-            <p>id: {{ bar.id }}</p>
-        </div>
+<ul class="bar">
+    <li *ngFor="let bar of bars; let i = index;"
+        [class.selected]="bar === selectedBar"
+        (click)="onSelect(bar)">
+        <span class="badge">{{ i }}</span>{{ bar.name }}
     </li>
 </ul>
+<hr>
+<app-bar-detail [bar]="selectedBar"></app-bar-detail>
