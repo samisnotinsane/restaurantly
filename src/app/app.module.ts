@@ -24,8 +24,8 @@ import { BarDetailComponent } from './bar-detail/bar-detail.component';
     PubsComponent,
     BarsComponent,
     CoffeeDetailComponent,
-    RestaurantDetailComponent
-    BarDetailComponent
+    RestaurantDetailComponent,
+    BarDetailComponent,
   ],
   imports: [
     BrowserModule,
