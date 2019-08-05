@@ -1,7 +1,8 @@
+<hr>
 <div *ngIf="recommendations.length === 0">
 <i>There are no trending venues near your location. Why not try browsing for a specific category (e.g. Coffee)?</i>
 </div>
-<ul class="recommendation">
+<ul *ngIf="recommendations.length > 0" class="recommendation">
     <li *ngFor="let recommendation of recommendations; let i = index;"
         [class.selected]="recommendation === selectedRecommendation"
         (click)="onSelect(recommendation)">
