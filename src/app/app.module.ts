@@ -5,7 +5,6 @@ import { HttpClientModule }    from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
-import { ExploreComponent } from './explore/explore.component';
 import { TrendingComponent } from './trending/trending.component';
 import { CoffeeComponent } from './coffee/coffee.component';
 import { PubsComponent } from './pubs/pubs.component';
@@ -20,7 +19,6 @@ import { BarDetailComponent } from './bar-detail/bar-detail.component';
   declarations: [
     AppComponent,
     RestaurantComponent,
-    ExploreComponent,
     TrendingComponent,
     CoffeeComponent,
     PubsComponent,
