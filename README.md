@@ -2,8 +2,7 @@
 Browse local restaurants, cafes, pubs & bars. 
 
 Notes:
- - App uses FourSquare API, therefore results will not be shown without a valid 'client id' and 'client secret' token
- - 'Trending' and 'Explore' pages are not yet implemented
+ - Since this app uses FourSquare API, results will not be shown without a valid 'client id' and 'client secret' token which can be obtained through [developer.foursquare.com](https://developer.foursquare.com/)
  - Location is hardcoded to London, GB
 
 ## Screenshots
