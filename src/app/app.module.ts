@@ -11,6 +11,7 @@ import { CoffeeComponent } from './coffee/coffee.component';
 import { PubsComponent } from './pubs/pubs.component';
 import { BarsComponent } from './bars/bars.component';
 import { CoffeeDetailComponent } from './coffee-detail/coffee-detail.component';
+import { BarDetailComponent } from './bar-detail/bar-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CoffeeDetailComponent } from './coffee-detail/coffee-detail.component';
     CoffeeComponent,
     PubsComponent,
     BarsComponent,
-    CoffeeDetailComponent
+    CoffeeDetailComponent,
+    BarDetailComponent
   ],
   imports: [
     BrowserModule,
