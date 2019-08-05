@@ -1,14 +1,10 @@
 <h3>Restaurants</h3>
 
-<ul>
-    <li *ngFor="let restaurant of restaurants">
-        <h4>{{ restaurant.name | uppercase }}</h4>
-        <div>
-            <p>rating: {{ restaurant.rating }} stars</p>
-            <p>category: {{ restaurant.category }}</p>
-            <p>address: {{ restaurant.address }}</p>
-            <p>url: <a [href]="restaurant.url">{{ restaurant.url }}</a></p>
-            <p>id: {{ restaurant.id }}</p>
-        </div>
+<ul class="restaurant">
+    <li *ngFor="let restaurant of restaurants; let i = index;"
+        [class.selected]="restaurant === selectedRestaurant"
+        (click)="onSelect(restaurant)">
+        <span class="badge">{{ i }}</span> {{ restaurant.name }}
     </li>
 </ul>
+<hr>
