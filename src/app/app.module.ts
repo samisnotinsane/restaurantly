@@ -14,6 +14,7 @@ import { TrendingDetailComponent } from './trending-detail/trending-detail.compo
 import { PubDetailComponent } from './pub-detail/pub-detail.component';
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 import { BarDetailComponent } from './bar-detail/bar-detail.component';
+import { HeaderComponent } from './shared/components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { BarDetailComponent } from './bar-detail/bar-detail.component';
     PubDetailComponent,
     RestaurantDetailComponent,
     BarDetailComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
