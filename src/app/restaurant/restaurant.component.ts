@@ -9,18 +9,18 @@ import { RestaurantService } from '../restaurant.service';
 })
 export class RestaurantComponent implements OnInit {
 
+  counter: number = 0;
   restaurants: Restaurant[];
   selectedRestaurant: Restaurant;
 
   constructor(private restaurantService: RestaurantService) { }
 
-  getRestaurants(): void {
-    this.restaurantService.getRestaurants()
-      .subscribe(restaurants => this.restaurants = restaurants);
+  onSelect(restaurant: Restaurant): void {
+    this.selectedRestaurant = restaurant;
   }
 
   ngOnInit() {
-    this.getRestaurants();
+    this.restaurants = this.restaurantService.getRestaurants('restaurant');
   }
 
 }

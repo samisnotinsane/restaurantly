@@ -12,6 +12,9 @@ import { PubsComponent } from './pubs/pubs.component';
 import { BarsComponent } from './bars/bars.component';
 import { CoffeeDetailComponent } from './coffee-detail/coffee-detail.component';
 import { TrendingDetailComponent } from './trending-detail/trending-detail.component';
+import { PubDetailComponent } from './pub-detail/pub-detail.component';
+import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
+import { BarDetailComponent } from './bar-detail/bar-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { TrendingDetailComponent } from './trending-detail/trending-detail.compo
     PubsComponent,
     BarsComponent,
     CoffeeDetailComponent,
-    TrendingDetailComponent
+    TrendingDetailComponent,
+    PubDetailComponent,
+    RestaurantDetailComponent,
+    BarDetailComponent,
   ],
   imports: [
     BrowserModule,
