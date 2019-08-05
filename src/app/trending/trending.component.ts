@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Restaurant } from '../restaurant';
+import { RestaurantService } from '../restaurant.service';
 
 @Component({
   selector: 'app-trending',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrendingComponent implements OnInit {
 
-  constructor() { }
+  recommendations: Restaurant[];
+  selectedRecommendation: Restaurant;
+
+  constructor(private restaurantService: RestaurantService) { }
+
+  onSelect(recommendation: Restaurant): void {
+    this.selectedRecommendation = recommendation;
+  }
 
   ngOnInit() {
+    this.recommendations = this.restaurantService.getRecommendations();
   }
 
 }
