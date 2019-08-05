@@ -1,9 +1,11 @@
-<ul class="coffee">
-    <li *ngFor="let coffeeShop of coffeeShops; let i = index;"
-        [class.selected]="coffeeShop === selectedCoffeeShop"
-        (click)="onSelect(coffeeShop)">
-        <span class="badge">{{ i }}</span>{{ coffeeShop.name }}
-    </li>
-</ul>
 <hr>
-<app-coffee-detail [coffee]="selectedCoffeeShop"></app-coffee-detail>
+<div class="card-columns">
+    <div *ngFor="let coffeeShop of coffeeShops" class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ coffeeShop.name }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ coffeeShop.category }}</h6>
+            <p class="card-text">{{ coffeeShop.address }}</p>
+        </div>
+    </div>
+</div>
+<hr>

@@ -1,9 +1,11 @@
-<ul class="restaurant">
-    <li *ngFor="let restaurant of restaurants; let i = index;"
-        [class.selected]="restaurant === selectedRestaurant"
-        (click)="onSelect(restaurant)">
-        <span class="badge">{{ i }}</span> {{ restaurant.name }}
-    </li>
-</ul>
 <hr>
-<app-restaurant-detail [restaurant]="selectedRestaurant"></app-restaurant-detail>
+<div class="card-columns">
+    <div *ngFor="let restaurant of restaurants" class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ restaurant.name }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ restaurant.category }}</h6>
+            <p class="card-text">{{ restaurant.address }}</p>
+        </div>
+    </div>
+</div>
+<hr>

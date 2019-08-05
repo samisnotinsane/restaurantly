@@ -1,9 +1,11 @@
-<ul class="pub">
-    <li *ngFor="let pub of pubs; let i = index;"
-        [class.selected]="pub === selectedPub"
-        (click)="onSelect(pub)">
-        <span class="badge">{{ i }}</span>{{ pub.name }}
-    </li>
-</ul>
 <hr>
-<app-pub-detail [pub]="selectedPub"></app-pub-detail>
+<div class="card-columns">
+    <div *ngFor="let pub of pubs" class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ pub.name }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ pub.category }}</h6>
+            <p class="card-text">{{ pub.address }}</p>
+        </div>
+    </div>
+</div>
+<hr>
