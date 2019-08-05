@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Restaurant } from '../restaurant';
-import { PubService } from '../pub.service';
+import { RestaurantService } from '../restaurant.service';
 
 @Component({
   selector: 'app-pubs',
@@ -9,18 +9,18 @@ import { PubService } from '../pub.service';
 })
 export class PubsComponent implements OnInit {
 
+  counter: number = 0;
   pubs: Restaurant[];
   selectedPub: Restaurant;
 
-  constructor(private pubService: PubService) { }
+  constructor(private restaurantService: RestaurantService) { }
 
-  getPubs(): void {
-    this.pubService.getPubs()
-      .subscribe(pubs => this.pubs = pubs);
+  onSelect(pub: Restaurant): void {
+    this.selectedPub = pub;
   }
-
+  
   ngOnInit() {
-    this.getPubs();
+    this.pubs = this.restaurantService.getRestaurants('pubs');
   }
 
 }

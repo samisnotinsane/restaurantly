@@ -1,14 +1,11 @@
 <h3>Pubs</h3>
 
-<ul>
-    <li *ngFor="let pub of pubs">
-        <h4>{{ pub.name | uppercase }}</h4>
-        <div>
-            <p>rating: {{ pub.rating }} stars</p>
-            <p>category: {{ pub.category }}</p>
-            <p>address: {{ pub.address }}</p>
-            <p>url: <a [href]="pub.url">{{pub.url}}</a></p>
-            <p>id: {{ pub.id }}</p>
-        </div>
+<ul class="pub">
+    <li *ngFor="let pub of pubs; let i = index;"
+        [class.selected]="pub === selectedPub"
+        (click)="onSelect(pub)">
+        <span class="badge">{{ i }}</span>{{ pub.name }}
     </li>
 </ul>
+<hr>
+<app-pub-detail [pub]="selectedPub"></app-pub-detail>

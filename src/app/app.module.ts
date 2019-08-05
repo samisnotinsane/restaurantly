@@ -11,6 +11,7 @@ import { CoffeeComponent } from './coffee/coffee.component';
 import { PubsComponent } from './pubs/pubs.component';
 import { BarsComponent } from './bars/bars.component';
 import { CoffeeDetailComponent } from './coffee-detail/coffee-detail.component';
+import { PubDetailComponent } from './pub-detail/pub-detail.component';
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 import { BarDetailComponent } from './bar-detail/bar-detail.component';
 
@@ -24,6 +25,7 @@ import { BarDetailComponent } from './bar-detail/bar-detail.component';
     PubsComponent,
     BarsComponent,
     CoffeeDetailComponent,
+    PubDetailComponent,
     RestaurantDetailComponent,
     BarDetailComponent,
   ],
