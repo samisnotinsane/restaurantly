@@ -1,3 +1,13 @@
 <h3>Trending</h3>
-<i>Section not yet implemented.</i><br>
-<i>Please choose another category above. E.g. Coffee.</i>
+<div *ngIf="recommendations.length === 0">
+    <i>There are no trending venues near your location.</i>
+</div>
+<ul class="recommendation">
+    <li *ngFor="let recommendation of recommendations; let i = index;"
+        [class.selected]="recommendation === selectedRecommendation"
+        (click)="onSelect(recommendation)">
+        <span class="badge">{{ i }}</span>{{ recommendation.name }}
+    </li>
+</ul>
+<hr>
+<app-trending-detail [recommendation]="selectedRecommendation"></app-trending-detail>
