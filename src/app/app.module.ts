@@ -15,6 +15,7 @@ import { PubDetailComponent } from './pub-detail/pub-detail.component';
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 import { BarDetailComponent } from './bar-detail/bar-detail.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
     RestaurantDetailComponent,
     BarDetailComponent,
     HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
