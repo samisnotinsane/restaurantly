@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +18,7 @@ import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail
 import { BarDetailComponent } from './bar-detail/bar-detail.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +35,18 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     BarDetailComponent,
     HeaderComponent,
     FooterComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    OAuthModule.forRoot({
+      resourceServer: {
+          allowedUrls: ['https://foursquare.com/oauth2/authenticate'],
+          sendAccessToken: true
+      }
+  })
   ],
   providers: [],
   bootstrap: [AppComponent]

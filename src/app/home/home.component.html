@@ -1,0 +1,20 @@
+
+<div class="jumbotron">
+    <h1 *ngIf="!name" class="display-4">
+        Hi!
+    </h1>
+    <h1 *ngIf="name" class="display-4">
+        Hello, {{ name }}
+    </h1>
+    <div>
+        <p class="lead">Feeling hungry? Looking for a coffee?</p>
+    </div>
+    <hr class="my-4">
+    <div>
+        <p>Restaurantly makes it simple to find the perfect place you want.</p>
+    </div>
+    <div class="btn-group">
+        <a (click)="login()" class="btn btn-primary btn-lg rounded" href="#" role="button">Login</a> 
+        <a (click)="logoff()" class="btn btn-secondary btn-lg disabled" href="#" role="button">Logout</a>
+    </div>
+</div>

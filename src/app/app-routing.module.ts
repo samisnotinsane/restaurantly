@@ -5,12 +5,17 @@ import { TrendingComponent } from './trending/trending.component';
 import { CoffeeComponent } from './coffee/coffee.component';
 import { PubsComponent } from './pubs/pubs.component';
 import { BarsComponent } from './bars/bars.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/trending',
+    redirectTo: '/',
     pathMatch: 'full'
+  },
+  {
+    path: '',
+    component: HomeComponent,
   },
   {
     path: 'trending',
